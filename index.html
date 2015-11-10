@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="xiongkailing">
+    <meta name="description" content="peesonal blog">
+    <meta name="keywords" content="blog,web development,nodejs,exprss,nginx,.net,frontend,php">
+    <title>index</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="nav">
+    <div class="logo"></div>
+    <ul>
+        <li><a href="javascript:void(0);">首页</a></li>
+        <li><a href="javascript:void(0);">Node</a></li>
+        <li><a href="javascript:void(0);">.Net</a></li>
+        <li>
+            <a href="javascript:void(0);">其他</a>
+            <ul class="submenu">
+                <li><a href="javascript:void(0);">Git</a></li>
+                <li><a href="javascript:void(0);">Nginx</a></li>
+            </ul>
+        </li>
+        <li><a href="javascript:void(0);">关于</a></li>
+    </ul>
+</div>
+<div class="containor">
+
+</div>
+<div class="footer">
+    <span>&copy;<strong id="year"></strong>&nbsp;&nbsp;&nbsp;&nbsp;小熊有话说 </span>
+</div>
+<script type="text/javascript">
+    window.onload = function () {
+        document.getElementById('year').innerHTML = new Date().getFullYear();
+        var lists = document.getElementsByTagName('li');
+        var length = lists.length;
+        for (var i = 0; i < length; i++) {
+            lists[i].addEventListener('mouseenter', function () {
+                if (this.getElementsByTagName('ul').length != 0) {
+                    this.getElementsByTagName('ul')[0].style.display = 'block';
+                }
+            }, true);
+            lists[i].addEventListener('mouseleave', function () {
+                if (this.getElementsByTagName('ul').length != 0) {
+                    this.getElementsByTagName('ul')[0].style.display = 'none';
+                }
+            }, false);//实践证明由内向外的冒泡在使用上更舒服
+        }
+        screenChange();
+        window.onresize=function(){
+            screenChange();
+        };
+    }
+
+    function screenChange(){
+        var pageheight=document.body.scrollHeight;
+        var clientheight=document.body.clientHeight;
+        if(pageheight<=clientheight){
+            document.getElementsByClassName('containor')[0].style.minHeight=(clientheight-100).toString()+"px";
+        }
+    }
+</script>
+</body>
+</html>

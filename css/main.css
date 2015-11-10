@@ -1,0 +1,24 @@
+/*global*/
+*{ margin: 0;padding: 0;font-family: sans-serif; font-size:12px; }
+html,body{  width: 100%; height: 100%; min-height: 100% ;}
+a{  text-decoration: none; color:#03f }
+a :hover,a :focus,a :active ,a:visited { text-decoration: none;color:#03f  }
+li { list-style-type: none; }
+
+/*nav header*/
+.nav{ width: 100%;height: 50px;background: #000;color:#fff;line-height: 50px;font-size:14px; }
+.nav .logo { background: url('../images/logo.png') no-repeat center; width: 100px;height: 50px; float: left}
+.nav li{ display: block;float: left;text-align: center;padding: 0 15px;}
+.nav li:hover{background: #333}
+.nav a{ text-decoration: none; color:inherit; }
+li ul{ display:none; }
+.submenu li{ float: none; }
+
+/*body content*/
+.containor{ width:100%;background: gray;height: 200px;}
+
+/*footer*/
+.footer{ width: 100%; height:50px; bottom: 0px; background: #999;text-align: center; line-height: 50px;}
+
+/*other*/
+.coverLay{ background: #fff;opacity: 0.7;z-index:100;width: 100%;height: 100%;position: absolute;top:0;left: 0 }/*узуж*/
