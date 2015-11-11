@@ -14,11 +14,36 @@ li { list-style-type: none; }
 li ul{ display:none; }
 .submenu li{ float: none; }
 
+.nav .right { float:right; margin: 10px 50px 10px 0;}
+.nav .right .inputbox { width: 140px;height: 30px;border: none; border-radius:5px 0 0 5px;display: block;float: left; }
+.nav .right .inputbox:focus { width:200px; }
+.nav .right .inputbtn { width: 50px;height: 30px; background:#0f0 no-repeat;border: none;float: left;border-radius: 0 5px 5px 0;  }
+.nav .right .login { height: 30px; line-height: 30px; float: left; padding: 0 20px;}
+
 /*body content*/
-.containor{ width:100%;background: gray;height: 200px;}
+.containor{ width:100%; background: #999 }
 
 /*footer*/
 .footer{ width: 100%; height:50px; bottom: 0px; background: #999;text-align: center; line-height: 50px;}
 
 /*other*/
 .coverLay{ background: #fff;opacity: 0.7;z-index:100;width: 100%;height: 100%;position: absolute;top:0;left: 0 }/*ÕÚÕÖ*/
+.breadbrum {}/*Ãæ°üÆ¬*/
+.pager{}/*·­Ò³*/
+
+/*index Ò³ ¿é×´*/
+
+.header  { with:100%; background:#699;height: 250px;}
+
+.homelist { width:70% ;margin: 10px 15% 30px; overflow:hidden;zoom:1; text-align: center;}
+.homelist .article { width:30%; margin: 2px 2px;float: left; height:110px;min-width: 280px; background: #fff ; padding: 10px; overflow: hidden;}
+
+/*article Ò³*/
+.contentpage{ width: 70%;margin:0 15% ;background: #fff;position: absolute; }
+.contentpage .title { text-align: center;font: bold 12px/20px arial,sans-serif; margin-top: 40px; }
+.contentpage .summary { text-align: center; width: 70%;margin: 15px 15%;height:30px;line-height:30px;}
+.contentpage .summary .keywords {display: block;height:20px;line-height:20px; float: left;background: #6c6;margin:5px 10px; border: solid 1px #0f0; border-radius: 3px; padding:1px 5px;}
+.contentpage .content { width:100%; font-size: 14px;padding: 30px; }
+/*list Ò³ */
+
+/*user Ò³ ÈÕ¼ÇÐÎÊ½*/
