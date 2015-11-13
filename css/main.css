@@ -6,9 +6,9 @@ a :hover,a :focus,a :active ,a:visited { text-decoration: none;color:#03f  }
 li { list-style-type: none; }
 
 /*nav header*/
-.nav{ width: 100%;height: 50px;background: #000;color:#fff;line-height: 50px;font-size:14px; }
+.nav{ width: 100%;height: 50px;background: #000;color:#fff;line-height: 50px;font-size:14px; position: absolute;z-index: 1;}
 .nav .logo { background: url('../images/logo.png') no-repeat center; width: 100px;height: 50px; float: left}
-.nav li{ display: block;float: left;text-align: center;padding: 0 15px;}
+.nav li{ display: block;float: left;text-align: center;padding: 0 15px; }
 .nav li:hover{background: #333}
 .nav a{ text-decoration: none; color:inherit; }
 li ul{ display:none; }
@@ -21,7 +21,8 @@ li ul{ display:none; }
 .nav .right .login { height: 30px; line-height: 30px; float: left; padding: 0 20px;}
 
 /*body content*/
-.containor{ width:100%; background: #999 }
+.containor{ background: #666;padding-top: 50px; }
+.pagecontent { margin:0 15%;background: #fff; }
 
 /*footer*/
 .footer{ width: 100%; height:50px; bottom: 0px; background: #999;text-align: center; line-height: 50px;}
@@ -35,15 +36,38 @@ li ul{ display:none; }
 
 .header  { with:100%; background:#699;height: 250px;}
 
-.homelist { width:70% ;margin: 10px 15% 30px; overflow:hidden;zoom:1; text-align: center;}
+.homelist { width:70% ;margin: 0 15% ;padding: 15px; overflow:hidden;zoom:1; text-align: center;}
 .homelist .article { width:30%; margin: 2px 2px;float: left; height:110px;min-width: 280px; background: #fff ; padding: 10px; overflow: hidden;}
 
 /*article 页*/
-.contentpage{ width: 70%;margin:0 15% ;background: #fff;position: absolute; }
+.contentpage  { padding:40px 30px; }
 .contentpage .title { text-align: center;font: bold 12px/20px arial,sans-serif; margin-top: 40px; }
 .contentpage .summary { text-align: center; width: 70%;margin: 15px 15%;height:30px;line-height:30px;}
 .contentpage .summary .keywords {display: block;height:20px;line-height:20px; float: left;background: #6c6;margin:5px 10px; border: solid 1px #0f0; border-radius: 3px; padding:1px 5px;}
-.contentpage .content { width:100%; font-size: 14px;padding: 30px; }
-/*list 页 */
+.contentpage .content { font-size: 14px;padding: 30px; }
 
+/*search list 页 */
+
+.listpage { padding: 35px; overflow: hidden;}
+.listpage .searchbox { margin: 50px 0;height: 40px; }
+.listpage .searchbox .searchBtn { float:left; height: 42px; background: #0033ff; color:white;font:bold 14px sans-serif;padding: 0 20px;line-height: 42px;border: none;display: block; }
+.listpage .searchbox .searchBtn:active { background: #666666  }
+.listpage .oneline { margin: 15px 0;border-bottom: dashed 1px; overflow: hidden;zoom: 1; }
+.listpage .oneline .code { font-size: 14px; display: block;float: left;width: 10%;}
+.listpage .oneline .author { font: italic 14px sans-serif; width: 20%; display: block;float: left; }
+.listpage .oneline .title{ font: bold 14px sans-serif; width:60%; display:block; float:left;}
+.listpage .oneline .time { display: block;float: left;overflow: hidden;width: 10%; }
 /*user 页 日记形式*/
+.calendar { padding:40px;overflow: hidden;}
+.year { width: 20px;position: fixed;top: 0;left: 17%; height: 100%;font-size: 20px; text-align: center; display: block;writing-mode: vertical-lr; opacity: 0.5; }
+.calendar .day { margin: 20px 2%;}
+.calendar .day .date { width: 30px;height: 30px; border: none;border-radius: 15px; background: #00ff00;line-height: 30px; text-align: center; }
+.calendar .day .date-visited { background: #669999; }
+.calendar .day .introduction { margin: 10px 0 0 50px;overflow: hidden;zoom:1 }
+.calendar .day .introduction.first{ margin-top: -30px; }
+.calendar .day .introduction:nth-child(even){ background: #fff }
+.calendar .day .introduction:nth-child(odd){ background: #ffc }
+
+.calendar .day .introduction .title { font: 14px bold;width: 100%; }
+.calendar .day .introduction .summary { width: 80%; height:20px; float: left; font:14px italic; padding: 3px 5px;overflow: hidden; }
+.calendar .day .introduction .time { width: 16%; height:20px;float: left; padding: 3px 5px;overflow: hidden;font:14px italic; }

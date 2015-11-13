@@ -34,7 +34,7 @@
     </div>
 </div>
 <div class="containor">
-    <div class="contentpage">
+    <div class="pagecontent contentpage">
         <div class="title">
             <h2 style="font: bold 20px arial,sans-serif;">标题 标题 标题</h2>
         </div>
@@ -76,7 +76,12 @@
         var pageheight = document.body.scrollHeight;
         var clientheight = document.body.clientHeight;
         if (pageheight <= clientheight) {
-            document.getElementsByClassName('containor')[0].style.minHeight = (clientheight - 100).toString() + "px";
+            if(document.getElementsByClassName('containor')[0]) {
+                document.getElementsByClassName('containor')[0].style.minHeight = (clientheight - 100).toString() + "px";
+            }
+            if(document.getElementsByClassName('pagecontent')[0]) {
+                document.getElementsByClassName('pagecontent')[0].style.minHeight = (clientheight - 100).toString() + "px";
+            }
         }
     }
 </script>

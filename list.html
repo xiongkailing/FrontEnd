@@ -5,7 +5,7 @@
     <meta name="author" content="xiongkailing">
     <meta name="description" content="peesonal blog">
     <meta name="keywords" content="blog,web development,nodejs,exprss,nginx,.net,frontend,php">
-    <title>index</title>
+    <title>搜索页</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -27,24 +27,36 @@
     <div class="right">
         <input type="text" class="inputbox" placeholder="关键字多个请用逗号隔开">
         <input type="button" class="inputbtn" value="搜索">
+
         <div class="login">
             <a href="javascript:void(0);">加入我们</a>&nbsp;|&nbsp;<a href="javascript:void(0);">登陆</a>
         </div>
     </div>
 </div>
 <div class="containor">
-    <div class="header"></div>
-    <div class="homelist">
-        <div class="article">111</div>
-        <div class="article">222</div>
-        <div class="article">333</div>
-        <div class="article">444</div>
+    <div class="pagecontent listpage">
+        <div class="searchbox">
+            <button class="searchBtn">搜索</button>
+            <input type="text" style="height: 40px;width: 50%;" placeholder="关键字" />
+        </div>
+        <div class="oneline">
+            <div class="code">#1</div>
+            <div class="author">kailingbear</div>
+            <div class="title">Nginx 简介</div>
+            <div class="time">2015-11-12</div>
+        </div>
+        <div class="oneline">
+            <div class="code">#2</div>
+            <div class="author">kailingbear</div>
+            <div class="title">Nginx 简介</div>
+            <div class="time">2015-11-12</div>
+        </div>
     </div>
 </div>
+
 <div class="footer">
     <span>&copy;<strong id="year"></strong>&nbsp;&nbsp;&nbsp;&nbsp;小熊有话说 </span>
 </div>
-
 <script type="text/javascript">
     window.onload = function () {
         document.getElementById('year').innerHTML = new Date().getFullYear();
